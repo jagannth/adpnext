@@ -1,0 +1,14 @@
+.cd{
+text-decoration: none;
+}
+.cd:hover{
+    /* transform: scale(1.1);
+    transition: transform 0.25s ease-out; */
+    background-color: #51b56d;
+    color: #ffffff!important;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.bg-success-light{
+    background-color: #51b56d1f;
+}   

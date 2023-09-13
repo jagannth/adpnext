@@ -1,6 +1,4 @@
 import crypto from 'crypto-js';
-// const secretKey = 'https://node.additionalsheet.com/api/v1/';
-// const baseUrl = 'https://node.additionalsheet.com/api/v1/';
 const secretKey = process.env.secretKey;
 const baseUrl = process.env.baseUrl;
 

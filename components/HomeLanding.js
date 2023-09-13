@@ -43,7 +43,7 @@ export default function HomeLanding(props) {
                     </div>
                     <div className="col-lg-6 d-flex justify-content-center">
                         <div className='row'>
-                            {props?.data?.slice(0, 24).map((x) => {
+                            {props?.data?.slice(0, 30).map((x) => {
                                 return <div key={'hm_crs_top_' + x?._id} className='col-md-2 col-3 my-2 text-center'>
                                     <Link href={`/` + x?.route_name} className='tdn' onClick={() => { localStorage.setItem('course_id', x?._id) }}>
                                         <div className={`bg-info-subtle`}>

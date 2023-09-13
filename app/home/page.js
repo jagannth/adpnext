@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import { getAllData } from "../../services/proxyservce";
-import Header from '../../components/Header'
-import HomeCategory from '../../components/HomeCategory'
 import HomeLanding from '../../components/HomeLanding'
 import HomeAbout from '../../components/HomeAbout'
 import Tutorials from '../../components/Tutorials'
 import Subscribe from '../../components/Subscribe'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import HomeCategory from '../../components/HomeCategory'
 
 async function getCourse() {
     const response = await getAllData('course/all');

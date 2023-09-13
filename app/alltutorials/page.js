@@ -1,14 +1,15 @@
-import { getAllData } from '../../api/proxyservice'
 import { notFound } from 'next/navigation';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import AllTutorials from '../../components/AllTutorials'
+import AllTutorials from '../../components/AllTutorials';
+import { getAllData } from "../../services/proxyservce";
 
 async function getCourse() {
     // const response = await fetch(`${baseUrl}course/all`);
     const response = await getAllData('course/all');
     if (response.status === false) notFound();
     return response?.data;
+    // return [];
 }
 
 export const metadata = {

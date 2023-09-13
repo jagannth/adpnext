@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllData } from "../../api/proxyservice";
+import { getAllData } from "../../services/proxyservce";
 import Header from '../../components/Header'
 import HomeCategory from '../../components/HomeCategory'
 import HomeLanding from '../../components/HomeLanding'
@@ -9,10 +9,10 @@ import Subscribe from '../../components/Subscribe'
 import Footer from '../../components/Footer'
 
 async function getCourse() {
-    // const response = await fetch(`${baseUrl}course/all`);
     const response = await getAllData('course/all');
     if (response.status === false) notFound();
     return response?.data;
+    // return [];
 }
 async function getCategories(data) {
     const groupedData = groupBy(data, "category");

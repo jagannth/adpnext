@@ -1,7 +1,7 @@
 export default function page() {
   return (
     <div>
-      ccategory default
+      category default
     </div>
   )
 }

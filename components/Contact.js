@@ -1,6 +1,5 @@
 'use client'
 
-import { createData } from "../api/proxyservice";
 import { useState } from "react";
 
 
@@ -24,7 +23,7 @@ export default function Contact() {
             message: form.message
         }
         console.log(data);
-        createData('contact/new', data);
+        // createData('contact/new', data);
         clear();
         alert('Thank you for subscribing/submitting the message');
     }

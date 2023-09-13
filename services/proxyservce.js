@@ -1,10 +1,11 @@
 import crypto from 'crypto-js';
-// const baseUrl = "http://localhost:1445/api/v1/"
-const secretKey = "ea156f27ad2ca956aa71c45961d0b613";
-const baseUrl = "https://node.additionalsheet.com/api/v1/"
+// const secretKey = 'https://node.additionalsheet.com/api/v1/';
+// const baseUrl = 'https://node.additionalsheet.com/api/v1/';
+const secretKey = process.env.secretKey;
+const baseUrl = process.env.baseUrl;
 
 export const getAllData = (url) => {
-    var response = fetch(baseUrl + url)
+    var data = fetch(baseUrl + url)
         .then((response) => response.json())
         .then((data) => {
             const bytes = crypto.AES.decrypt(data.token, secretKey);
@@ -13,16 +14,12 @@ export const getAllData = (url) => {
         }).catch(error => {
             return { message: error.message, status: false };
         })
-    return response;
+    return data;
 }
 export const createData = (url, body) => {
     var data = fetch(baseUrl + url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    })
+        'Content-Type': 'application/json'
+    }, JSON.stringify(body))
         .then((response) => response.json()).then(data => {
             const bytes = crypto.AES.decrypt(data.token, secretKey);
             const decryptedData = bytes.toString(crypto.enc.Utf8);

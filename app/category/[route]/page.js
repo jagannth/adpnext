@@ -1,20 +1,22 @@
-import { getAllData } from '../../../api/proxyservice'
 import { notFound } from 'next/navigation';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Category from '../../../components/Category';
+import { getAllData } from "../../../services/proxyservce";
 
 async function getCategoryByRouteName(name) {
     // const response = await fetch(`${baseUrl}course/all`);
     const response = await getAllData('name/category/' + name);
     if (response.status === false) notFound();
     return response?.data;
+    // return {};
 }
 
 async function getCourseByCateId(id) {
     const response = await getAllData('course/category/' + id);
     if (response.status === false) notFound();
     return response?.data;
+    // return [];
 };
 
 export const metadata = {

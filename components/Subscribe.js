@@ -1,8 +1,5 @@
 'use client'
 
-import { createData } from "../api/proxyservice";
-
-
 export default function Subscribe() {
     const subScribe = () => {
         var _email = (document.getElementById('email')).value;
@@ -12,9 +9,9 @@ export default function Subscribe() {
             message: ''
         }
         // console.log(data);
-        createData('contact/new', data).then((res)=>{
-            (document.getElementById('email')).value = '';
-        });
+        // createData('contact/new', data).then((res)=>{
+        //     (document.getElementById('email')).value = '';
+        // });
         alert('Thank you for subscribing');
     }
     return (

@@ -12,7 +12,7 @@ export default function Category(props) {
           <div className='row'>
             <div className='col-4 col-md-2'>
               <div className='card card-body d-flex justify-content-center' style={{ height: '9rem' }}>
-                <Image height={100} width={100} className='rounded mx-auto w-100 d-block' alt={props?.category?.image_link} src={imageBarUrl + props?.category?.image_link} />
+                <img height={100} width={100} className='rounded mx-auto w-100 d-block' alt={props?.category ? props?.category?.image_link: 'image_none' } src={props?.category ? imageBarUrl + props?.category?.image_link : imageBarUrl+'empty.png'} />
               </div>
             </div>
             <div className='col-8 col-md-10'>
@@ -37,7 +37,6 @@ export default function Category(props) {
                           <Link href={`/${y.route_name}`} className='tdn'>
                             <div style={{ 'height': '13rem' }} className='zoom card card-body text-center text-dark shadow p-3 border'>
                               <div style={{ fontSize: '' }}>
-                                {/* <i className="bi bi-facebook"></i> */}
                                 <Image height={50} width={50} className=' mt-4' alt={y?.image_link} src={imageBarUrl + y?.image_link} />
                               </div>
                               <h6 className='mt-4'>{y?.name}</h6>

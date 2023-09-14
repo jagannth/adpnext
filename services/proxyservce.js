@@ -2,8 +2,9 @@ import crypto from 'crypto-js';
 const secretKey = process.env.secretKey;
 const baseUrl = process.env.baseUrl;
 
-export const getAllData = (url) => {
-    var data = fetch(baseUrl + url)
+export const  getAllData = async (url,iscache = 0) => {
+    console.log(iscache);
+    var data = await fetch(baseUrl + url, {cache:iscache == 1?'no-store':'default'})
         .then((response) => response.json())
         .then((data) => {
             const bytes = crypto.AES.decrypt(data.token, secretKey);

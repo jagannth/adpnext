@@ -244,3 +244,18 @@
 .pen{
   pointer-events: none!important;
 }
+
+
+/* home.css */
+.cd{
+  text-decoration: none;
+  }
+  .cd:hover{
+      background-color: #51b56d;
+      color: #ffffff!important;
+      transition: 0.5s;
+      cursor: pointer;
+  }
+  .bg-success-light{
+      background-color: #51b56d1f;
+  }  

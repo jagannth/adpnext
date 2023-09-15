@@ -41,23 +41,23 @@ export default function Footer(props) {
                     <div className="col-6 col-lg-2 mb-3">
                         <h5>Top Examples</h5>
                         <ul className="list-unstyled">
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/html" target="_blank" rel="noopener">HTML Example</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/css">CSS Example</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/javascript">JavaScript Example</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/react">React Example</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/angular">Angular Example</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/examples/dotnet">Dotnet Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/html" target="_blank" rel="noopener">HTML Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/css">CSS Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/javascript">JavaScript Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/react">React Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/angular">Angular Example</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/dotnet">Dotnet Example</Link></li>
                         </ul>
                     </div>
                     <div className="col-6 col-lg-2 mb-3">
                         <h5>Extra as</h5>
                         <ul className="list-unstyled">
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/templates/all">Starter template</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/templates/html">HTML Templates</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/templates/c">C# Compiler</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/templates/javascript">JavaScript Tools</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="/qna/html">Question/Answers</Link></li>
-                            <li className="mb-2"><Link className="nav-link text-secondary" href="interview/html">Interview Prepare</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/all">Starter template</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/html">HTML Templates</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/c">C# Compiler</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/javascript">JavaScript Tools</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/html">Question/Answers</Link></li>
+                            <li className="mb-2"><Link className="nav-link text-secondary" href="/html">Interview Prepare</Link></li>
                         </ul>
                       
                     </div>

@@ -1,6 +1,4 @@
 import { notFound } from 'next/navigation';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import AllTutorials from '../../components/AllTutorials';
 import { getAllData } from "../../services/proxyservce";
 
@@ -23,9 +21,7 @@ export default async function page() {
     // const colorsList = ['bg-primary-subtle', 'bg-success-subtle', 'bg-danger-subtle', 'bg-warning-subtle', 'bg-info-subtle']
     return (
         <div>
-            <Header name="home" />
             <AllTutorials data={_courses} articles={[]} colors={colorsList} />
-            <Footer name="home" />
         </div>
     )
 }

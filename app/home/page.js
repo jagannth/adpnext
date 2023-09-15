@@ -4,8 +4,6 @@ import HomeLanding from '../../components/HomeLanding'
 import HomeAbout from '../../components/HomeAbout'
 import Tutorials from '../../components/Tutorials'
 import Subscribe from '../../components/Subscribe'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import HomeCategory from '../../components/HomeCategory'
 
 async function getCourse() {
@@ -37,13 +35,11 @@ export default async function HomePro() {
     // const colorsList = ['bg-primary-subtle', 'bg-success-subtle', 'bg-danger-subtle', 'bg-warning-subtle', 'bg-info-subtle']
     return (
         <div>
-            <Header name="home"/>
             <HomeLanding data={_courses} colors={colorsList} />
             <HomeCategory />
             <Tutorials categories={_categories} />
             <HomeAbout />
             <Subscribe />
-            <Footer name="home"/>
         </div>
     )
 }

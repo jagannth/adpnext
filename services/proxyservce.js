@@ -2,9 +2,10 @@ import crypto from 'crypto-js';
 const secretKey = process.env.secretKey;
 const baseUrl = process.env.baseUrl;
 
-export const  getAllData = async (url,iscache = 0) => {
-    console.log(iscache);
-    var data = await fetch(baseUrl + url, {cache:iscache == 1?'no-store':'default'})
+export const  getAllData = async (url,iscache) => {
+    const _cache = iscache === 1? 'no-store' : 'force-cache';
+    console.log(_cache);
+    var data = await fetch(baseUrl + url, {cache: _cache})
         .then((response) => response.json())
         .then((data) => {
             const bytes = crypto.AES.decrypt(data.token, secretKey);

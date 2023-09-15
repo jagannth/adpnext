@@ -1,5 +1,3 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import About from '../../components/About';
 
 export const metadata = {
@@ -10,9 +8,7 @@ export const metadata = {
 export default function page() {
   return (
     <div>
-      <Header name="home"/>
       <About/>
-      <Footer name="home"/>
     </div>
   )
 }
